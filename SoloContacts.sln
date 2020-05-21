@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.29911.98
+VisualStudioVersion = 16.0.30114.128
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoloContacts", "SoloContacts.csproj", "{8EBD6D34-0185-4F9E-982E-8B488DA0BE92}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoloContacts.UI", "SoloContacts.UI\SoloContacts.UI.csproj", "{53D1032A-432D-4FF4-BB60-47E9610F6788}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8EBD6D34-0185-4F9E-982E-8B488DA0BE92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8EBD6D34-0185-4F9E-982E-8B488DA0BE92}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8EBD6D34-0185-4F9E-982E-8B488DA0BE92}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8EBD6D34-0185-4F9E-982E-8B488DA0BE92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53D1032A-432D-4FF4-BB60-47E9610F6788}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53D1032A-432D-4FF4-BB60-47E9610F6788}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53D1032A-432D-4FF4-BB60-47E9610F6788}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53D1032A-432D-4FF4-BB60-47E9610F6788}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {52CD7A99-4A4B-44BE-B288-AEABD328EA69}
+		SolutionGuid = {8D76587A-58B8-45F5-9386-B706D4901276}
 	EndGlobalSection
 EndGlobal
