@@ -8,8 +8,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data SQL", "Data SQL", "{02E837CE-B2F1-48F9-9A64-51959FCDFB33}"
 	ProjectSection(SolutionItems) = preProject
 		000_Database.sql = 000_Database.sql
-		001_Nlog.sql = 001_Nlog.sql
-		002_SQL_Login.sql = 002_SQL_Login.sql
+		001_SQL_Login.sql = 001_SQL_Login.sql
+		002_Nlog.sql = 002_Nlog.sql
 	EndProjectSection
 EndProject
 Global
