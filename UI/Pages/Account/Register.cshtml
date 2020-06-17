@@ -1,0 +1,77 @@
+﻿@page
+@model SoloContacts.UI.Pages.Account.RegisterModel
+@{
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        @if (Model.BrokenRulesManager.HasInformations)
+        {
+            <div class="alert alert-info">
+                The following information items occured while processing the file:<br />
+                <p style="white-space: pre-line; margin-left:10px">@Model.BrokenRulesManager.ToInformationString()</p>
+            </div>
+        }
+        @if (Model.BrokenRulesManager.HasWarnings)
+        {
+            <div class="alert alert-warning">
+                The following warnings occured while processing the file:<br />
+                <p style="white-space: pre-line; margin-left:10px">@Model.BrokenRulesManager.ToWarningString()</p>
+            </div>
+        }
+        @if (Model.BrokenRulesManager.HasErrors)
+        {
+            <div class="alert alert-danger">
+                The following errors occured while processing the file:<br />
+                <p style="white-space: pre-line; margin-left:10px">@Model.BrokenRulesManager.ToErrorsString()</p>
+            </div>
+        }
+        <div class="card">
+            <div class="card-body p-4">
+                <form asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post" id="payment-form">
+                    <h1>Register</h1>
+                    <p class="text-muted">Create your account</p>
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <div class="form-group mb-3">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">@@</span>
+                            </div>
+                            <input asp-for="Email" class="form-control" type="text" placeholder="Email" required>
+                        </div>
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="icon-lock"></i>
+                                </span>
+                            </div>
+                            <input asp-for="Password" class="form-control" type="password" placeholder="Password" required>
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="icon-lock"></i>
+                                </span>
+                            </div>
+                            <input asp-for="ConfirmPassword" class="form-control" type="password" placeholder="Repeat password" required>
+                        </div>
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+                    <section>
+                        <button class="btn btn-block btn-success ladda-button" type="submit" data-style="zoom-in">Create Account</button>
+                    </section>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
+

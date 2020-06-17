@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="./">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="author" content="Alux Solutions">
+    @if (IsSectionDefined("Metatags"))
+    {@RenderSection("Metatags", required: false)}
+    <link rel="icon" type="image/ico" href="~/images/rail-small.png" sizes="any" />
+    <link href="~/lib/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <link href="~/lib/pace-progress/css/pace.min.css" rel="stylesheet">
+    <!-- Add local styles, mostly for plugins css file -->
+    @if (IsSectionDefined("Styles"))
+    {@RenderSection("Styles", required: false)}
+    <!-- Main styles for this application-->
+    <link href="~/css/style.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RXMMB6G17M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-RXMMB6G17M');
+    </script>
+</head>
+<body class="app flex-row align-items-center">
+    <!-- Content Content -->
+    <div class="app-body">
+        <div class="container">
+            <!-- Main view  -->
+            @RenderBody()
+        </div>
+    </div>
+    <!-- End of Content Wrapper -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/lib/pace-progress/js/pace.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

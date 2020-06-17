@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>SoloContacts.Library</AssemblyName>
+    <RootNamespace>SoloContacts.Library</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\**" />
+    <Compile Remove="Utilites\**" />
+    <Compile Remove="Validation\**" />
+    <EmbeddedResource Remove="Data\**" />
+    <EmbeddedResource Remove="Utilites\**" />
+    <EmbeddedResource Remove="Validation\**" />
+    <None Remove="Data\**" />
+    <None Remove="Utilites\**" />
+    <None Remove="Validation\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="ContactStore.cs" />
+    <Compile Remove="Interfaces\IAuthorizationHandler.cs" />
+    <Compile Remove="Interfaces\IAuthorizationService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="1.1.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj" />
+  </ItemGroup>
+
+</Project>
