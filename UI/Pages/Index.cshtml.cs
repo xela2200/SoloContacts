@@ -24,7 +24,7 @@ namespace SoloContacts.UI.Pages
 
         public void OnGet()
         {
-            Contact _Contact = _ContactService.RetrieveContact(1);
+            Contact _Contact = _ContactService.Retrieve(1);
             _Contact.FirstName = "G.I. Joe";
             FirstName = _Contact.FirstName;
             LastName = _Contact.LastName;

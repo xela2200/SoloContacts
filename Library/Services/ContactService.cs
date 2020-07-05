@@ -22,9 +22,8 @@ namespace SoloContacts.Library.Services
         //    _ApplicationUser = applicationUser;
         //}
 
-        public Contact RetrieveContact(int id)
+        public Contact Retrieve(int id)
         {
-
 
 
             // private System.Security.Claims.ClaimsPrincipal principal;
@@ -38,23 +37,13 @@ namespace SoloContacts.Library.Services
 
             //System.Security.Claims.ClaimsPrincipal _Current = System.Security.Claims.ClaimsPrincipal.Current;
 
-
-
-
-
-
-
-
             //ClaimsPrincipal cp = this.User;
 
-            //HttpContext xx
 
 
             //_HomeViewModel.DistributorId = Convert.ToInt32(
             //       ClaimsPrincipal.Current.Claims.Where(x => x.Type == "CompanyId").Select(c => c.Value).FirstOrDefault()
             //        );
-
-
 
 
             Business.Contact _Contact = new Business.Contact() { LastName = "Ugma" };
@@ -65,7 +54,7 @@ namespace SoloContacts.Library.Services
 
             //throw new NotImplementedException();
 
-            Contact _Result = new Contact() { LastName = _Contact.LastName};
+            Contact _Result = new Contact() { LastName = _Contact.LastName };
 
             _Result.BrokenRulesManager.AddBrokenRuleRange(_Contact.BrokenRulesManager.BrokenRulesCollection);
 
