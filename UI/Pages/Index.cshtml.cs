@@ -1,13 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
-using SoloContacts.Library;
 using SoloContacts.Library.Interfaces;
 using SoloContacts.Library.Models;
-using System.Security.Cryptography.X509Certificates;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Linq;
 
 namespace SoloContacts.UI.Pages
 {
@@ -29,7 +23,6 @@ namespace SoloContacts.UI.Pages
             FirstName = _Contact.FirstName;
             LastName = _Contact.LastName;
             BrokenRulesManager.AddBrokenRuleRange(_Contact.BrokenRulesManager.BrokenRulesCollection);
-
         }
 
 
