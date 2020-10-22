@@ -2,3 +2,7 @@
 obj/
 SoloContacts.UI/bin/
 Library/bin/
+Api/bin/
+UI/bin/Debug/netcoreapp3.1/SoloContacts.UI.dll
+UI/bin/
+Core/bin/
